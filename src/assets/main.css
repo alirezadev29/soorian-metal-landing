@@ -1,0 +1,176 @@
+/* ============================================
+   SOORIAN METAL - Design System (RTL)
+   ============================================ */
+
+/* ---------- متغیرهای رنگ ---------- */
+:root {
+  /* رنگ‌های اصلی برند */
+  --green: #1a7a5c;
+  --green-dark: #145a44;
+  --green-light: #e8f5f0;
+
+  /* رنگ‌های پایه */
+  --navy: #2c3e50;
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --off-white: #f5f7f6;
+  --gray: #6b7280;
+  --gray-light: #e5e7eb;
+
+  /* سایه */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 40px rgba(26, 122, 92, 0.15);
+}
+
+/* ---------- ریست ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
+  line-height: 1.8;
+  overflow-x: hidden;
+  text-align: right;
+  direction: rtl;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- کانتینر ---------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---------- تیترهای سکشن ---------- */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.green-text {
+  color: var(--green);
+}
+
+/* ---------- دکمه‌ها ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(26, 122, 92, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(26, 122, 92, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--green);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white:hover {
+  background: var(--green-light);
+  transform: translateY(-3px);
+}
+
+/* ---------- اصلاح برای اعداد و تلفن ---------- */
+.ltr {
+  direction: ltr;
+  display: inline-block;
+}
+
+/* ---------- ریسپانسیو ---------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
