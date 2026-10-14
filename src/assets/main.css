@@ -172,5 +172,56 @@ ul {
 
   .section-subtitle {
     font-size: 1rem;
+ 
+ 
   }
+
+/* ============================================
+   Scroll Reveal Animations
+   ============================================ */
+
+.reveal-init {
+  opacity: 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+/* انیمیشن از پایین */
+.reveal-up {
+  transform: translateY(40px);
+}
+
+/* انیمیشن از راست (در RTL، از راست به چپ می‌آید) */
+.reveal-right {
+  transform: translateX(60px);
+}
+
+/* انیمیشن از چپ */
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+/* بزرگ‌نمایی */
+.reveal-scale {
+  transform: scale(0.85);
+}
+
+/* حالت نهایی - وقتی در دید قرار گرفت */
+.reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* احترام به تنظیمات کاربر */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
 }

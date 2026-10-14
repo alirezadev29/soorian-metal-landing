@@ -1,13 +1,15 @@
 <script setup>
+
 // لینک‌ها
 const SHOP_URL = 'https://soorianmetal.com/shop/';
 const PHONE_LINK = 'tel:+985135231610';
 
 // آمار برای نمایش زیر دکمه‌ها
+import AnimatedCounter from './AnimatedCounter.vue';
 const stats = [
-  { number: '+۱۵', label: 'سال تجربه' },
-  { number: '+۵۰۰', label: 'پروژه موفق' },
-  { number: '+۱۰۰۰', label: 'مشتری راضی' }
+  { number: 15, suffix: '+', label: 'سال تجربه' },
+  { number: 500, suffix: '+', label: 'پروژه موفق' },
+  { number: 1000, suffix: '+', label: 'مشتری راضی' }
 ];
 </script>
 
@@ -41,14 +43,20 @@ const stats = [
           </a>
         </div>
 
-        <!-- آمار -->
-        <div class="hero-stats">
-          <div v-for="stat in stats" :key="stat.label" class="stat-item">
-            <h3 class="stat-number">{{ stat.number }}</h3>
-            <p class="stat-label">{{ stat.label }}</p>
-          </div>
+          <!-- آمار -->
+<div class="hero-stats">
+  <div v-for="stat in stats" :key="stat.label" class="stat-item">
+    <h3 class="stat-number">
+      <AnimatedCounter
+        :end="stat.number"
+        :suffix="stat.suffix"
+        :duration="2000"
+      />
+    </h3>
+    <p class="stat-label">{{ stat.label }}</p>
+  </div>
+</div>
         </div>
-      </div>
 
       <!-- ستون تصویر: SVG داخلی -->
       <div class="hero-image">
