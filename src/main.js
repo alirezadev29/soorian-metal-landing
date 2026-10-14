@@ -1,5 +1,11 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import './assets/main.css';   // 👈 این خط را اضافه کن
+import { reveal } from './directives/reveal';
+import './assets/main.css';
 
-createApp(App).mount('#app');
+const app = createApp(App);
+
+// ثبت دایرکتیو به‌صورت global
+app.directive('reveal', reveal);
+
+app.mount('#app');
